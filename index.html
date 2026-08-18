@@ -12,6 +12,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #080808;
@@ -27,25 +31,29 @@
       text-align: center;
       padding: 30px 20px;
       background:
-        radial-gradient(circle at top, #6b21a8, #080808 65%);
+        radial-gradient(circle at top, #333 0%, #080808 55%);
+    }
+
+    .hero {
+      max-width: 700px;
     }
 
     .hero h1 {
-      font-size: clamp(50px, 15vw, 100px);
-      letter-spacing: 5px;
+      font-size: clamp(50px, 14vw, 100px);
+      letter-spacing: 4px;
       margin-bottom: 10px;
     }
 
     .hero p {
-      color: #ccc;
       font-size: 20px;
+      color: #ccc;
       margin-bottom: 30px;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 25px;
-      margin: 6px;
+      padding: 14px 28px;
+      margin: 8px;
       border-radius: 30px;
       background: white;
       color: black;
@@ -53,11 +61,117 @@
       font-weight: bold;
     }
 
-    .button.dark {
-      background: transparent;
-      color: white;
-      border: 1px solid #777;
+    .button:hover {
+      opacity: 0.8;
     }
 
     section {
-      padding: 
+      padding: 70px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 18px;
+      padding: 30px;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 8px;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #444;
+      padding: 10px 18px;
+      border-radius: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: #888;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>RIZY JAY</h1>
+      <p>Artist • Afrobeat • R&B</p>
+
+      <a class="button" href="#about">Explore</a>
+      <a class="button" href="https://www.tiktok.com/@rizyjay" target="_blank">
+        TikTok
+      </a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Rizy Jay</h2>
+
+    <div class="card">
+      <p>
+        Welcome to the official website of Rizy Jay.
+        This is the home for music, videos, updates and everything
+        connected to the Rizy Jay journey.
+      </p>
+    </div>
+  </section>
+
+  <section id="music">
+    <h2>Music</h2>
+
+    <div class="card">
+      <h3>Coming Soon 🎵</h3>
+      <p>
+        New Rizy Jay music is on the way.
+        Stay connected for upcoming releases.
+      </p>
+    </div>
+  </section>
+
+  <section id="social">
+    <h2>Follow Rizy Jay</h2>
+
+    <div class="card socials">
+      <a href="https://www.tiktok.com/@rizyjay" target="_blank">
+        TikTok
+      </a>
+
+      <a href="https://www.instagram.com/" target="_blank">
+        Instagram
+      </a>
+
+      <a href="https://www.youtube.com/" target="_blank">
+        YouTube
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+
+    <div class="card">
+      <p>
+        For music, collaborations and bookings, contact Rizy Jay.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Rizy Jay. All rights reserved.
+  </footer>
+
+</body>
+</html>
