@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Charting App</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    .app {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #chartContainer {
+      margin-top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <h1>📊 My Charting App</h1>
+
+  <label>Labels</label>
+  <input id="labels" placeholder="Jan, Feb, Mar, Apr">
+
+  <label>Values</label>
+  <input id="values" placeholder="10, 20, 15, 30">
+
+  <label>Chart type</label>
+  <select id="chartType">
+    <option value="bar">Bar Chart</option>
+    <option value="line">Line Chart</option>
+    <option value="pie">Pie Chart</option>
+  </select>
+
+  <button onclick="createChart()">Create Chart</button>
+
+  <div id="chartContainer">
+    <canvas id="myChart"></canvas>
+  </div>
+
+</div>
+
+<script>
+let chart;
+
+function createChart() {
+
+  const labels = document
+    .getElementById("labels")
+    .value
+    .split(",")
+    .map(item => item.trim());
+
+  const values = document
+    .getElementById("values")
+    .value
+    .split(",")
+    .map(item => Number(item.trim()));
+
+  const type = document.getElementById("chartType").value;
+
+  if (chart) {
+    chart.destroy();
+  }
+
+  const ctx = document.getElementById("myChart");
+
+  chart = new Chart(ctx, {
+    type: type,
+
+    data: {
+      labels: labels,
+
+      datasets: [{
+        label: "My Data",
+        data: values
+      }]
+    },
+
+    options: {
+      responsive: true
+    }
+  });
+}
+</script>
+
+</body>
+  </html>
