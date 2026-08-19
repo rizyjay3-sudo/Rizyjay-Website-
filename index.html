@@ -9,6 +9,8 @@
 <style>
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -16,7 +18,6 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #050505;
   color: #fff;
@@ -28,55 +29,66 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 18px 20px;
   background: rgba(5,5,5,0.96);
   border-bottom: 1px solid #292929;
+  padding: 16px 20px;
   text-align: center;
 }
 
-nav .logo {
+.logo {
   color: #d4af37;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: bold;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #d4af37;
 }
 
 /* HERO */
 .hero {
-  min-height: 90vh;
-  padding: 70px 20px;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 50px 20px;
+
   background:
-    radial-gradient(circle at center, #302600 0%, #0b0b0b 45%, #050505 80%);
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
+    url("rizyjay.jpg") center/cover no-repeat;
 }
 
-.hero-photo {
+.hero img {
   width: 230px;
   height: 230px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #d4af37;
-  box-shadow: 0 0 45px rgba(212,175,55,.35);
-  margin-bottom: 28px;
+  border: 4px solid #d4af37;
+  box-shadow: 0 0 35px rgba(212,175,55,.45);
+  margin-bottom: 25px;
 }
 
-.official {
+.badge {
   color: #d4af37;
   font-size: 13px;
-  font-weight: bold;
   letter-spacing: 4px;
   margin-bottom: 12px;
 }
 
 .hero h1 {
-  margin: 0;
-  font-size: clamp(42px, 12vw, 72px);
-  letter-spacing: 5px;
+  font-size: clamp(42px, 10vw, 70px);
   line-height: 1;
+  margin-bottom: 15px;
 }
 
 .hero h1 span {
@@ -84,125 +96,104 @@ nav .logo {
 }
 
 .hero p {
-  color: #bbb;
+  color: #ccc;
   font-size: 18px;
-  letter-spacing: 3px;
-  margin: 18px 0 30px;
+  max-width: 600px;
+  margin-bottom: 25px;
 }
 
-/* BUTTONS */
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.btn {
+.button {
   display: inline-block;
-  padding: 14px 26px;
+  background: #d4af37;
+  color: #050505;
+  padding: 13px 25px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: .25s;
+  margin: 5px;
 }
 
-.gold {
-  background: #d4af37;
-  color: #050505;
-}
-
-.outline {
-  border: 1px solid #d4af37;
-  color: white;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-/* MAIN */
-.container {
-  width: 100%;
-  max-width: 850px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
+/* SECTIONS */
 section {
-  margin-bottom: 70px;
+  max-width: 900px;
+  margin: auto;
+  padding: 70px 20px;
 }
 
 .section-title {
-  color: #d4af37;
-  font-size: 30px;
-  margin-bottom: 20px;
   text-align: center;
+  font-size: 38px;
+  margin-bottom: 35px;
 }
 
-.center-text {
-  text-align: center;
-  color: #ccc;
+.section-title span {
+  color: #d4af37;
 }
 
 /* ABOUT */
-.about-box {
-  padding: 30px 22px;
-  background: #111;
-  border: 1px solid #252525;
-  border-radius: 20px;
+.about {
+  text-align: center;
+}
+
+.about p {
+  color: #ccc;
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
 }
 
 /* MUSIC */
 .music-card {
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 22px;
   padding: 30px 20px;
-  background: linear-gradient(145deg, #151515, #090909);
-  border: 1px solid #3c3219;
-  border-radius: 24px;
   text-align: center;
-  box-shadow: 0 15px 45px rgba(0,0,0,.45);
+  box-shadow: 0 10px 35px rgba(0,0,0,.5);
 }
 
-.song-art {
-  width: 260px;
-  height: 260px;
-  max-width: 100%;
+.music-card img {
+  width: 230px;
+  height: 230px;
   object-fit: cover;
-  border-radius: 18px;
-  border: 3px solid #d4af37;
-  margin-bottom: 22px;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
 
 .song-title {
   font-size: 27px;
-  margin: 5px 0;
+  margin-bottom: 8px;
 }
 
-.artist-credit {
+.artist-name {
   color: #d4af37;
-  font-size: 17px;
-  margin-bottom: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-.song-note {
-  color: #999;
-  font-size: 14px;
+.music-card p {
+  color: #bbb;
+  margin-bottom: 15px;
 }
 
 audio {
   width: 100%;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .download {
   display: inline-block;
-  margin-top: 5px;
-  padding: 14px 25px;
   background: #d4af37;
-  color: #050505;
+  color: #000;
+  padding: 14px 25px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 30px;
+  margin-top: 10px;
+}
+
+.download:hover {
+  transform: scale(1.04);
 }
 
 /* SOCIAL */
@@ -212,245 +203,5 @@ audio {
 
 .social a {
   display: inline-block;
-  margin: 7px;
-  padding: 13px 25px;
-  border: 1px solid #d4af37;
-  border-radius: 30px;
-  color: white;
-  text-decoration: none;
-}
-
-/* CONTACT */
-.contact-box {
-  text-align: center;
-  background: #111;
-  padding: 30px 20px;
-  border-radius: 20px;
-  border: 1px solid #252525;
-}
-
-.contact-box p {
-  color: #bbb;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px 15px;
-  border-top: 1px solid #222;
-  color: #777;
-  font-size: 14px;
-}
-
-/* PHONE */
-@media (max-width: 600px) {
-
-  .hero {
-    min-height: 80vh;
-    padding: 50px 15px;
-  }
-
-  .hero-photo {
-    width: 190px;
-    height: 190px;
-  }
-
-  .hero h1 {
-    font-size: 42px;
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-
-  .song-art {
-    width: 220px;
-    height: 220px;
-  }
-
-  .container {
-    padding: 45px 15px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-<nav>
-  <div class="logo">RIZY JAY</div>
-</nav>
-
-
-<!-- HERO -->
-<header class="hero">
-
-  <div class="official">
-    OFFICIAL WEBSITE
-  </div>
-
-  <img
-    class="hero-photo"
-    src="d7fd0d83dbdd99970c54b96d2bc119b8.webp"
-    alt="Rizy Jay">
-
-  <h1>
-    RIZY <span>JAY</span>
-  </h1>
-
-  <p>
-    MUSIC • VIBES • ENTERTAINMENT
-  </p>
-
-  <div class="buttons">
-
-    <a href="#music" class="btn gold">
-      🎵 LISTEN NOW
-    </a>
-
-    <a
-      href="https://www.tiktok.com/@rizyjay"
-      target="_blank"
-      class="btn outline">
-      TikTok
-    </a>
-
-  </div>
-
-</header>
-
-
-<main class="container">
-
-<!-- ABOUT -->
-<section>
-
-  <h2 class="section-title">
-    ABOUT RIZY JAY
-  </h2>
-
-  <div class="about-box center-text">
-
-    <p>
-      Welcome to the official website of
-      <strong>Rizy Jay</strong>.
-    </p>
-
-    <p>
-      This is the home for music, entertainment,
-      updates and future releases.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- MUSIC -->
-<section id="music">
-
-  <h2 class="section-title">
-    FEATURED MUSIC
-  </h2>
-
-  <div class="music-card">
-
-    <img
-      class="song-art"
-      src="d7fd0d83dbdd99970c54b96d2bc119b8.webp"
-      alt="Anjilawo Omubili">
-
-    <h3 class="song-title">
-      Anjilawo Omubili
-    </h3>
-
-    <div class="artist-credit">
-      Trinity Styler
-    </div>
-
-    <p class="song-note">
-      Featured song — artist: Trinity Styler
-    </p>
-
-    <audio controls>
-      <source
-        src="Trinity%20Styler%20-%20Anjilawo%20omubili.mp3"
-        type="audio/mpeg">
-
-      Your browser does not support the audio player.
-    </audio>
-
-    <a
-      class="download"
-      href="Trinity%20Styler%20-%20Anjilawo%20omubili.mp3"
-      download="Trinity-Styler-Anjilawo-Omubili.mp3">
-
-      ⬇️ DOWNLOAD MUSIC
-
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- SOCIAL -->
-<section>
-
-  <h2 class="section-title">
-    FOLLOW RIZY JAY
-  </h2>
-
-  <div class="social">
-
-    <a
-      href="https://www.tiktok.com/@rizyjay"
-      target="_blank">
-      🎵 TikTok
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section>
-
-  <h2 class="section-title">
-    CONTACT
-  </h2>
-
-  <div class="contact-box">
-
-    <p>
-      For music, collaborations and future updates,
-      follow Rizy Jay on social media.
-    </p>
-
-    <a
-      href="https://www.tiktok.com/@rizyjay"
-      target="_blank"
-      class="btn gold">
-
-      CONTACT / FOLLOW
-
-    </a>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-<footer>
-
-  © 2026 Rizy Jay • Official Website
-
-</footer>
-
-</body>
-</html>
+  margin: 8px;
+  padding: 13px 22px;
