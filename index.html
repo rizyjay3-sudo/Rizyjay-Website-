@@ -1,444 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Trinity Styler | Official Website</title>
+  <title>Trinity Styler | Official Website</title>
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #050505;
-  color: #fff;
-  line-height: 1.6;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: white;
+      line-height: 1.6;
+    }
 
-/* NAVIGATION */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(5,5,5,0.95);
-  border-bottom: 1px solid #292929;
-  padding: 16px 20px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-}
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5,5,5,0.96);
+      border-bottom: 1px solid #292929;
+      padding: 16px 10px;
+      text-align: center;
+    }
 
-.logo {
-  color: #d4af37;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
+    nav .logo {
+      display: block;
+      color: #d4af37;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 14px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 7px;
+      font-size: 14px;
+    }
 
-nav a:hover {
-  color: #d4af37;
-}
+    nav a:hover {
+      color: #d4af37;
+    }
 
-/* HERO */
-.hero {
-  min-height: 92vh;
-  padding: 60px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    .hero {
+      min-height: 90vh;
+      padding: 55px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
 
-  background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.9)),
-    url("trinitystyler.jpg") center/cover no-repeat;
-}
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+        url("trinitystyler.jpg") center/cover no-repeat;
+    }
 
-.hero img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #d4af37;
-  box-shadow: 0 0 40px rgba(212,175,55,.45);
-  margin-bottom: 25px;
-}
+    .hero-content {
+      max-width: 800px;
+    }
 
-.badge {
-  color: #d4af37;
-  letter-spacing: 5px;
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
+    .hero img {
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #d4af37;
+      margin-bottom: 25px;
+      box-shadow: 0 0 35px rgba(212,175,55,0.5);
+    }
 
-h1 {
-  font-size: clamp(42px, 11vw, 75px);
-  line-height: 1;
-  letter-spacing: 2px;
-}
+    .badge {
+      color: #d4af37;
+      letter-spacing: 4px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
 
-.gold {
-  color: #d4af37;
-}
+    h1 {
+      font-size: 52px;
+      margin-bottom: 10px;
+    }
 
-.tagline {
-  color: #ddd;
-  font-size: 18px;
-  max-width: 650px;
-  margin: 20px auto 30px;
-}
+    .gold {
+      color: #d4af37;
+    }
 
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
+    .hero p {
+      color: #ddd;
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
 
-.button {
-  display: inline-block;
-  padding: 13px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .button {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 30px;
+      background: #d4af37;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 6px;
+    }
 
-.button-gold {
-  background: #d4af37;
-  color: #000;
-}
+    section {
+      padding: 70px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
 
-.button-dark {
-  border: 1px solid #d4af37;
-  color: #fff;
-}
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
 
-/* GENERAL SECTIONS */
-section {
-  padding: 75px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
+    .section-title span {
+      color: #d4af37;
+    }
 
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 35px;
-}
+    .about {
+      color: #ccc;
+      font-size: 18px;
+    }
 
-.section-title span {
-  color: #d4af37;
-}
+    .music-card {
+      background: #111;
+      border: 1px solid #292929;
+      border-radius: 22px;
+      padding: 30px 20px;
+      margin-top: 30px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+    }
 
-/* ABOUT */
-.about {
-  text-align: center;
-}
+    .music-card img {
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
 
-.about p {
-  max-width: 700px;
-  margin: auto;
-  color: #ccc;
-  font-size: 17px;
-}
+    .song-title {
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
 
-/* MUSIC */
-.music-card {
-  max-width: 600px;
-  margin: auto;
-  padding: 30px 20px;
-  text-align: center;
-  background: #111;
-  border: 1px solid #292929;
-  border-radius: 22px;
-  box-shadow: 0 15px 40px rgba(0,0,0,.5);
-}
+    .music-card p {
+      color: #bbb;
+      margin-bottom: 15px;
+    }
 
-.music-card img {
-  width: 240px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 15px;
-  border: 2px solid #d4af37;
-  margin-bottom: 20px;
-}
+    audio {
+      width: 100%;
+      margin: 15px 0 20px;
+    }
 
-.song-title {
-  font-size: 27px;
-  margin-bottom: 8px;
-}
+    .download {
+      display: inline-block;
+      background: #d4af37;
+      color: #000;
+      padding: 14px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.music-card p {
-  color: #bbb;
-  margin-bottom: 15px;
-}
+    .social-box {
+      margin-top: 25px;
+      background: #111;
+      border: 1px solid #292929;
+      border-radius: 20px;
+      padding: 30px 20px;
+    }
 
-audio {
-  width: 100%;
-  margin: 15px 0;
-}
+    .social-link {
+      display: inline-block;
+      margin: 8px;
+      padding: 13px 22px;
+      border: 1px solid #d4af37;
+      border-radius: 30px;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.download {
-  display: inline-block;
-  background: #d4af37;
-  color: #000;
-  padding: 14px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 12px;
-}
+    .social-link:hover {
+      background: #d4af37;
+      color: #000;
+    }
 
-.download:hover,
-.button-gold:hover {
-  transform: scale(1.04);
-}
+    .contact {
+      color: #ccc;
+      font-size: 18px;
+    }
 
-/* SOCIAL */
-.social {
-  text-align: center;
-}
+    footer {
+      border-top: 1px solid #292929;
+      padding: 30px 20px;
+      text-align: center;
+      color: #888;
+    }
 
-.social-box {
-  background: #111;
-  border: 1px solid #292929;
-  border-radius: 20px;
-  padding: 30px 20px;
-  max-width: 600px;
-  margin: auto;
-}
+    footer strong {
+      color: #d4af37;
+    }
 
-.social-box p {
-  color: #bbb;
-  margin-bottom: 20px;
-}
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 38px;
+      }
 
-.social-link {
-  display: inline-block;
-  padding: 13px 25px;
-  border: 1px solid #d4af37;
-  border-radius: 30px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
+      .hero {
+        min-height: 80vh;
+        padding: 45px 15px;
+      }
 
-/* CONTACT */
-.contact {
-  text-align: center;
-}
+      .hero img {
+        width: 190px;
+        height: 190px;
+      }
 
-.contact p {
-  color: #bbb;
-  margin-bottom: 10px;
-}
+      .section-title {
+        font-size: 29px;
+      }
 
-/* FOOTER */
-footer {
-  border-top: 1px solid #292929;
-  padding: 30px 20px;
-  text-align: center;
-  color: #888;
-  font-size: 14px;
-}
-
-footer strong {
-  color: #d4af37;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  nav a {
-    margin: 0 5px;
-    font-size: 12px;
-  }
-
-  .hero {
-    min-height: 85vh;
-  }
-
-  .hero img {
-    width: 190px;
-    height: 190px;
-  }
-
-  section {
-    padding: 55px 16px;
-  }
-
-  .section-title {
-    font-size: 30px;
-  }
-
-  .music-card img {
-    width: 200px;
-    height: 200px;
-  }
-}
-</style>
+      nav a {
+        font-size: 13px;
+        margin: 0 4px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-  <div class="logo">TRINITY STYLER</div>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">TRINITY STYLER</div>
 
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#music">Music</a>
-  <a href="#social">Social</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#music">Music</a>
+    <a href="#social">Social</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<!-- HERO -->
-<header class="hero" id="home">
 
-  <img src="trinitystyler.jpg" alt="Trinity Styler">
+  <!-- HERO -->
+  <section id="home" class="hero">
 
-  <div class="badge">OFFICIAL ARTIST WEBSITE</div>
+    <div class="hero-content">
 
-  <h1>
-    TRINITY <span class="gold">STYLER</span>
-  </h1>
+      <img
+        src="trinitystyler.jpg"
+        alt="Trinity Styler">
 
-  <p class="tagline">
-    Welcome to the official website of Trinity Styler.
-    Discover the music, latest releases, updates and everything
-    happening in the Trinity Styler world.
-  </p>
+      <div class="badge">
+        OFFICIAL ARTIST WEBSITE
+      </div>
 
-  <div class="hero-buttons">
-    <a href="#music" class="button button-gold">
-      🎵 LISTEN NOW
-    </a>
+      <h1>
+        Trinity <span class="gold">Styler</span>
+      </h1>
 
-    <a href="#about" class="button button-dark">
-      DISCOVER TRINITY
-    </a>
-  </div>
+      <p>
+        Welcome to the official website of Trinity Styler.
+        Discover music, releases, updates and more.
+      </p>
 
-</header>
+      <a class="button" href="#music">
+        🎵 LISTEN TO MUSIC
+      </a>
 
-<!-- ABOUT -->
-<section id="about" class="about">
+    </div>
 
-  <h2 class="section-title">
-    About <span>Trinity Styler</span>
-  </h2>
+  </section>
 
-  <p>
-    Trinity Styler is an emerging artist bringing his own style,
-    energy and creativity to music. This is the official home for
-    his music, releases, news and updates.
-  </p>
 
-</section>
+  <!-- ABOUT -->
+  <section id="about">
 
-<!-- MUSIC -->
-<section id="music">
+    <h2 class="section-title">
+      About <span>Trinity Styler</span>
+    </h2>
 
-  <h2 class="section-title">
-    🎵 Latest <span>Release</span>
-  </h2>
-
-  <div class="music-card">
-
-    <img
-      src="trinitystyler.jpg"
-      alt="Trinity Styler music artwork"
-    >
-
-    <h3 class="song-title">
-      Anjilawo Omubili
-    </h3>
-
-    <p>
-      Listen to the latest Trinity Styler release below.
+    <p class="about">
+      Welcome to the official online home of Trinity Styler.
+      This is where you can discover the latest music,
+      releases, updates and official information.
     </p>
 
-    <audio controls>
-      <source
-        src="Trinity Styler - Anjilawo omubili.mp3"
-        type="audio/mpeg"
-      >
-      Your browser does not support audio.
-    </audio>
+  </section>
 
-    <br>
 
-    <a
-      class="download"
-      href="Trinity Styler - Anjilawo omubili.mp3"
-      download="Trinity-Styler-Anjilawo-Omubili.mp3"
-    >
-      ⬇️ DOWNLOAD MUSIC
-    </a>
+  <!-- MUSIC -->
+  <section id="music">
 
-  </div>
+    <h2 class="section-title">
+      🎵 Latest <span>Release</span>
+    </h2>
 
-</section>
+    <div class="music-card">
 
-<!-- SOCIAL -->
-<section id="social" class="social">
+      <img
+        src="trinitystyler.jpg"
+        alt="Trinity Styler artwork">
 
-  <h2 class="section-title">
-    Follow <span>Trinity Styler</span>
-  </h2>
+      <h3 class="song-title">
+        Anjilawo Omubili
+      </h3>
 
-  <div class="social-box">
+      <p>
+        Latest release by Trinity Styler.
+        Listen below or download the song.
+      </p>
 
-    <p>
-      Follow Trinity Styler for new music, videos and updates.
-    </p>
+      <audio controls>
+        <source
+          src="Trinity Styler - Anjilawo omubili.mp3"
+          type="audio/mpeg">
 
-    <!-- Add the artist's real social-media link here later -->
-    <a href="#" class="social-link">
-      📱 SOCIAL MEDIA
-    </a>
+        Your browser does not support audio.
+      </audio>
 
-  </div>
+      <br>
 
-</section>
+      <a
+        class="download"
+        href="Trinity Styler - Anjilawo omubili.mp3"
+        download>
+        ⬇️ DOWNLOAD MUSIC
+      </a>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
+    </div>
 
-  <h2 class="section-title">
-    Contact <span>Trinity Styler</span>
-  </h2>
+  </section>
 
-  <p>
-    For bookings, collaborations and official enquiries:
-  </p>
 
-  <p>
-    <strong>Contact Trinity Styler</strong>
-  </p>
+  <!-- SOCIAL -->
+  <section id="social">
 
-</section>
+    <h2 class="section-title">
+      Follow <span>Trinity Styler</span>
+    </h2>
 
-<!-- FOOTER -->
-<footer>
-  © 2026 <strong>Trinity Styler</strong> • Official Website
-</footer>
+    <div class="social-box">
+
+      <p class="about">
+        Follow Trinity Styler for new music,
+        updates and announcements.
+      </p>
+
+      <!-- Add official social links when available -->
+      <a class="social-link" href="#">
+        🎵 MUSIC
+      </a>
+
+      <a class="social-link" href="#">
+        📱 SOCIAL MEDIA
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <h2 class="section-title">
+      Contact <span>Trinity Styler</span>
+    </h2>
+
+    <div class="contact">
+
+      <p>
+        For bookings, collaborations and official enquiries,
+        contact Trinity Styler.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    © 2026
+    <strong>Trinity Styler</strong>
+    • Official Website
+
+  </footer>
 
 </body>
-  </html>
+                </html>
