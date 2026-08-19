@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rizy Jay | Official Website</title>
+<title>Trinity Styler | Official Website</title>
 
 <style>
 * {
@@ -29,23 +29,25 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(5,5,5,0.96);
+  background: rgba(5,5,5,0.95);
   border-bottom: 1px solid #292929;
   padding: 16px 20px;
   text-align: center;
+  backdrop-filter: blur(10px);
 }
 
 .logo {
   color: #d4af37;
-  font-size: 23px;
+  font-size: 22px;
   font-weight: bold;
   letter-spacing: 3px;
+  margin-bottom: 10px;
 }
 
 nav a {
-  color: #ddd;
+  color: #fff;
   text-decoration: none;
-  margin: 0 8px;
+  margin: 0 10px;
   font-size: 14px;
 }
 
@@ -56,73 +58,88 @@ nav a:hover {
 /* HERO */
 .hero {
   min-height: 92vh;
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px 20px;
 
   background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
-    url("rizyjay.jpg") center/cover no-repeat;
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.9)),
+    url("trinitystyler.jpg") center/cover no-repeat;
 }
 
 .hero img {
-  width: 230px;
-  height: 230px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #d4af37;
-  box-shadow: 0 0 35px rgba(212,175,55,.45);
+  box-shadow: 0 0 40px rgba(212,175,55,.45);
   margin-bottom: 25px;
 }
 
 .badge {
   color: #d4af37;
+  letter-spacing: 5px;
   font-size: 13px;
-  letter-spacing: 4px;
+  font-weight: bold;
   margin-bottom: 12px;
 }
 
-.hero h1 {
-  font-size: clamp(42px, 10vw, 70px);
+h1 {
+  font-size: clamp(42px, 11vw, 75px);
   line-height: 1;
-  margin-bottom: 15px;
+  letter-spacing: 2px;
 }
 
-.hero h1 span {
+.gold {
   color: #d4af37;
 }
 
-.hero p {
-  color: #ccc;
+.tagline {
+  color: #ddd;
   font-size: 18px;
-  max-width: 600px;
-  margin-bottom: 25px;
+  max-width: 650px;
+  margin: 20px auto 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
 .button {
   display: inline-block;
-  background: #d4af37;
-  color: #050505;
   padding: 13px 25px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  margin: 5px;
 }
 
-/* SECTIONS */
+.button-gold {
+  background: #d4af37;
+  color: #000;
+}
+
+.button-dark {
+  border: 1px solid #d4af37;
+  color: #fff;
+}
+
+/* GENERAL SECTIONS */
 section {
-  max-width: 900px;
+  padding: 75px 20px;
+  max-width: 1000px;
   margin: auto;
-  padding: 70px 20px;
 }
 
 .section-title {
   text-align: center;
-  font-size: 38px;
+  font-size: 36px;
   margin-bottom: 35px;
 }
 
@@ -136,39 +153,36 @@ section {
 }
 
 .about p {
-  color: #ccc;
-  font-size: 18px;
   max-width: 700px;
   margin: auto;
+  color: #ccc;
+  font-size: 17px;
 }
 
 /* MUSIC */
 .music-card {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px 20px;
+  text-align: center;
   background: #111;
   border: 1px solid #292929;
   border-radius: 22px;
-  padding: 30px 20px;
-  text-align: center;
-  box-shadow: 0 10px 35px rgba(0,0,0,.5);
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
 }
 
 .music-card img {
-  width: 230px;
-  height: 230px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
   border-radius: 15px;
+  border: 2px solid #d4af37;
   margin-bottom: 20px;
 }
 
 .song-title {
   font-size: 27px;
   margin-bottom: 8px;
-}
-
-.artist-name {
-  color: #d4af37;
-  font-weight: bold;
-  margin-bottom: 15px;
 }
 
 .music-card p {
@@ -189,10 +203,11 @@ audio {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
-.download:hover {
+.download:hover,
+.button-gold:hover {
   transform: scale(1.04);
 }
 
@@ -201,7 +216,229 @@ audio {
   text-align: center;
 }
 
-.social a {
+.social-box {
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 20px;
+  padding: 30px 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.social-box p {
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.social-link {
   display: inline-block;
-  margin: 8px;
-  padding: 13px 22px;
+  padding: 13px 25px;
+  border: 1px solid #d4af37;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #292929;
+  padding: 30px 20px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+footer strong {
+  color: #d4af37;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  nav a {
+    margin: 0 5px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero img {
+    width: 190px;
+    height: 190px;
+  }
+
+  section {
+    padding: 55px 16px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .music-card img {
+    width: 200px;
+    height: 200px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">TRINITY STYLER</div>
+
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#music">Music</a>
+  <a href="#social">Social</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+
+  <img src="trinitystyler.jpg" alt="Trinity Styler">
+
+  <div class="badge">OFFICIAL ARTIST WEBSITE</div>
+
+  <h1>
+    TRINITY <span class="gold">STYLER</span>
+  </h1>
+
+  <p class="tagline">
+    Welcome to the official website of Trinity Styler.
+    Discover the music, latest releases, updates and everything
+    happening in the Trinity Styler world.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#music" class="button button-gold">
+      🎵 LISTEN NOW
+    </a>
+
+    <a href="#about" class="button button-dark">
+      DISCOVER TRINITY
+    </a>
+  </div>
+
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+
+  <h2 class="section-title">
+    About <span>Trinity Styler</span>
+  </h2>
+
+  <p>
+    Trinity Styler is an emerging artist bringing his own style,
+    energy and creativity to music. This is the official home for
+    his music, releases, news and updates.
+  </p>
+
+</section>
+
+<!-- MUSIC -->
+<section id="music">
+
+  <h2 class="section-title">
+    🎵 Latest <span>Release</span>
+  </h2>
+
+  <div class="music-card">
+
+    <img
+      src="trinitystyler.jpg"
+      alt="Trinity Styler music artwork"
+    >
+
+    <h3 class="song-title">
+      Anjilawo Omubili
+    </h3>
+
+    <p>
+      Listen to the latest Trinity Styler release below.
+    </p>
+
+    <audio controls>
+      <source
+        src="Trinity Styler - Anjilawo omubili.mp3"
+        type="audio/mpeg"
+      >
+      Your browser does not support audio.
+    </audio>
+
+    <br>
+
+    <a
+      class="download"
+      href="Trinity Styler - Anjilawo omubili.mp3"
+      download="Trinity-Styler-Anjilawo-Omubili.mp3"
+    >
+      ⬇️ DOWNLOAD MUSIC
+    </a>
+
+  </div>
+
+</section>
+
+<!-- SOCIAL -->
+<section id="social" class="social">
+
+  <h2 class="section-title">
+    Follow <span>Trinity Styler</span>
+  </h2>
+
+  <div class="social-box">
+
+    <p>
+      Follow Trinity Styler for new music, videos and updates.
+    </p>
+
+    <!-- Add the artist's real social-media link here later -->
+    <a href="#" class="social-link">
+      📱 SOCIAL MEDIA
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+  <h2 class="section-title">
+    Contact <span>Trinity Styler</span>
+  </h2>
+
+  <p>
+    For bookings, collaborations and official enquiries:
+  </p>
+
+  <p>
+    <strong>Contact Trinity Styler</strong>
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 <strong>Trinity Styler</strong> • Official Website
+</footer>
+
+</body>
+  </html>
