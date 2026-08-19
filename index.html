@@ -1,96 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trinity Styler</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
-      text-align: center;
-    }
+<title>Rizy Jay | Official Website</title>
 
-    .artist {
-      padding: 30px 20px;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    .artist img {
-      width: 280px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid white;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #050505;
+  color: white;
+  text-align: center;
+}
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 5px;
-    }
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    .subtitle {
-      color: #bbb;
-      font-size: 18px;
-    }
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.95)),
+    url("rizyjay.jpg") center/cover no-repeat;
+}
 
-    .song {
-      max-width: 500px;
-      margin: 30px auto;
-      padding: 25px;
-      background: #222;
-      border-radius: 20px;
-    }
+.badge {
+  color: #d4af37;
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
 
-    .song h2 {
-      margin-bottom: 20px;
-    }
+.hero img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #d4af37;
+  box-shadow: 0 0 35px rgba(212,175,55,.45);
+  margin-bottom: 25px;
+}
 
-    audio {
-      width: 100%;
-    }
+h1 {
+  font-size: 52px;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
 
-    .social {
-      margin-top: 25px;
-    }
+.tagline {
+  color: #bbb;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
 
-    .social a {
-      color: white;
-      text-decoration: none;
-      margin: 10px;
-      font-size: 18px;
-    }
-  </style>
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.gold {
+  background: #d4af37;
+  color: black;
+}
+
+.dark {
+  border: 1px solid #d4af37;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.gold-text {
+  color: #d4af37;
+}
+
+.about {
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* MUSIC CARD */
+.music-card {
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.5);
+}
+
+.music-card img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.song-title {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+audio {
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* DOWNLOAD */
+.download {
+  display: inline-block;
+  background: #d4af37;
+  color: black;
+  padding: 14px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.download:hover {
+  transform: scale(1.05);
+}
+
+/* SOCIAL */
+.social a {
+  display: inline-block;
+  color: white;
+  border: 1px solid #d4af37;
+  padding: 13px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 8px;
+}
+
+.social a:hover {
+  background: #d4af37;
+  color: black;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #222;
+  padding: 30px;
+  color: #777;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .hero img {
+    width: 190px;
+    height: 190px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <section class="artist">
+<!-- HERO -->
+<header class="hero">
 
-    <img src="trinity.jpg" alt="Trinity Styler">
+  <div class="badge">OFFICIAL ARTIST WEBSITE</div>
 
-    <h1>Trinity Styler</h1>
+  <img src="rizyjay.jpg" alt="Rizy Jay">
 
-    <p class="subtitle">Artist • Music • Vibes</p>
+  <h1>RIZY JAY</h1>
 
-    <div class="song">
-      <h2>🎵 Anjilawo omubili</h2>
+  <p class="tagline">
+    Music • Vibes • Entertainment
+  </p>
 
-      <audio controls>
-        <source src="anjilawo-omubili.mp3" type="audio/mpeg">
-        Your browser does not support audio.
-      </audio>
-    </div>
+  <div class="buttons">
+    <a href="#music" class="btn gold">🎵 LISTEN NOW</a>
 
-    <div class="social">
-      <a href="https://www.tiktok.com/@trinitystyler" target="_blank">
-        TikTok
-      </a>
-    </div>
+    <a
+      href="https://www.tiktok.com/@rizyjay"
+      target="_blank"
+      class="btn dark">
+      TikTok
+    </a>
+  </div>
 
-  </section>
+</header>
+
+
+<div class="container">
+
+<!-- ABOUT -->
+<section>
+
+  <h2>Welcome to <span class="gold-text">Rizy Jay</span></h2>
+
+  <p class="about">
+    Welcome to the official website of Rizy Jay.
+    Discover music, latest releases, updates and
+    everything happening in the Rizy Jay world.
+  </p>
+
+</section>
+
+
+<!-- MUSIC -->
+<section id="music">
+
+  <h2>🎵 Latest Release</h2>
+
+  <div class="music-card">
+
+    <img
+      src="rizyjay.jpg"
+      alt="Rizy Jay music artwork">
+
+    <h3 class="song-title">
+      Anjilawo Omubili
+    </h3>
+
+    <p class="about">
+      Listen to the latest release below.
+    </p>
+
+    <audio controls>
+      <source
+        src="anjilawo.mp3"
+        type="audio/mpeg">
+
+      Your browser does not support audio.
+    </audio>
+
+    <!-- DOWNLOAD BUTTON -->
+    <a
+      class="download"
+      href="anjilawo.mp3"
+      download="Rizy-Jay-Anjilawo-Omubili.mp3">
+
+      ⬇️ DOWNLOAD MUSIC
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- SOCIAL -->
+<section>
+
+  <h2>Follow <span class="gold-text">Rizy Jay</span></h2>
+
+  <div class="social">
+
+    <a
+      href="https://www.tiktok.com/@rizyjay"
+      target="_blank">
+
+      🎵 TikTok
+
+    </a>
+
+  </div>
+
+</section>
+
+</div>
+
+
+<footer>
+
+  © 2026 Rizy Jay • Official Website
+
+</footer>
 
 </body>
 </html>
